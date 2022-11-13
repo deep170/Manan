@@ -1,0 +1,389 @@
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  margin-left: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+.nav-item {
+   font-family: 'Source Code Pro', monospace;   
+    font-size: 20px;
+    font-weight: bold;
+}
+
+body{
+
+    background-image: url('images/BGM.jpg');
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-bottom: 0px;
+    margin-top: 55px;
+    height: 300px;
+    color: white;
+    font-family: 'Jockey One', sans-serif;
+}
+.navCus {
+    background-color: #043249;
+    
+}
+
+.navbar #myMenu .custom-nav .nav-item a {
+  font-family: 'Righteous', cursive;
+  font-weight: normal;  
+  font-size: 18px; 
+    color: silver;
+}
+
+/*.navbar #myMenu .custom-nav {
+  float: right;
+}
+*/
+.navbar #myMenu .custom-nav .nav-item a:hover {
+    color:#ff8039;
+}
+
+.imgH a:hover{
+   color: slateblue;
+}
+
+@keyframes mymove 
+{
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(360deg);}
+}
+
+@keyframes spin
+{
+
+     0% {transform: rotateZ(0deg);} 
+         100%  {transform:rotateZ(360deg); } 
+}
+.x {
+    animation: mymove 5s linear 1;
+
+}
+.sp { 
+    animation: spin 2s linear infinite;
+    
+}
+
+.fam {
+    font-family: 'Metal Mania', cursive;
+    font-size: 80px;
+    color:#ff8039;
+}
+
+a{
+    color:silver;
+
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#ff8039;
+}
+
+
+/* GLOBAL STYLES */
+
+
+   /* DEMO-SPECIFIC STYLES */
+
+
+
+   /* try */
+   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+   
+   h4 {
+     font-family: 'Source Code Pro', monospace;  
+     font-size: 28px;
+     font-weight: bold;
+     width: 100%;
+     text-align: justify;
+   }
+   /* Animation */
+   /*p {
+     animation: animated-text 4s steps(29,end) 1s 1 normal both,
+                animated-cursor 600ms steps(29,end) infinite;
+   }
+   
+   p: nth-child(2)
+   {
+       white-space:nowrap;
+       overflow:hidden;    
+      animation: animated-text2 4s steps(29,end) 1s 1 normal both;
+       -webkit-animation-delay: 5s; 
+       animation-delay: 5s;
+       -webkit-animation-fill-mode: forwards;
+       animation-fill-mode: forwards;
+   }
+   
+   /* text animation */
+   
+   /*@keyframes animated-text{
+     from{width: 0;}
+     to{width: 472px;}
+   }
+   
+   @keyframes animated-text2{
+     from{width: 0;}
+     to{width: 472px;}
+   }
+   
+   /* cursor animations */
+   
+   /*@keyframes animated-cursor{
+     from{border-right-color: rgba(0,255,0,.75);}
+     to{border-right-color: transparent;}
+   }
+
+
+ 
+  .typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+  
+
+
+  /* back to top */
+ #back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color:  #043249;
+    color: #ff8039; 
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+  }
+  #back-to-top-btn:hover, #back-to-top-btn:focus {
+    color:  #043249;
+    background-color: #ff8039;  
+  }
+  
+  @media(max-width: 992px) {
+    .container { padding: 20px 100px; }
+    #back-to-top-btn { font-size: 22px; width: 40px; height: 40px; bottom: 15px; right: 15px; }
+  }
+  @media(max-width:768px) {
+    body { font-size: 16px; }
+    .container { padding: 10px 50px; }
+    h1 { font-size: 26px; }
+    h2 { font-size: 22px; }
+    hr { margin: 30px 0; }
+    #back-to-top-btn { font-size: 18px; width: 50px; height: 50px; bottom: 20px; right: 15px; }
+  }
+  
+  /* Animations */
+  .btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+  }
+  /* zoomIn */
+  /* @keyframes btnEntrance { 
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+      opacity: 1;
+    }    
+  } */
+  
+  /* fadeInUp */
+  @keyframes btnEntrance {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .btnExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;  
+    animation-name: btnExit;
+  }
+  /* zoomOut */
+  /* @keyframes btnExit {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  } */
+  
+  /* fadeOutDown */
+  @keyframes btnExit {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+  
+
+/*Side Bar*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.containerN{
+  z-index: 98;
+  position: fixed;
+  width: 33px;
+  margin-top: 150px;
+  margin-left: 5px;
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,.4);
+}
+.containerN a{
+  z-index: 98;
+  position: relative;
+  display: block;
+  height: 32px;
+  width: 100%;
+  color: white;
+  line-height: 17px;
+  padding-left: 10%;
+  border-bottom: 1px solid rgba(0,0,0,.4);
+}
+.containerN a i{
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  font-size: 22px;
+}
+.containerN a span{
+  position: relative;
+  margin-left: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 15px 13px;
+  border-radius: 3px;
+  transition: all .4s;
+  opacity: 0;
+  visibility: hidden;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,.4);
+}
+/* .containerN a span:before{
+ position: absolute;
+  content: '';
+  top: 50%;
+  left: -8px;
+  height: 18px;
+  width: 18px;
+  transform: translateY(-50%) rotate(45deg); 
+} */
+.containerN a:nth-child(1),
+.containerN a:nth-child(1) span,
+.containerN a:nth-child(1) span:before{
+  background: #E1306C;;
+}
+.containerN a:nth-child(2),
+.containerN a:nth-child(2) span,
+.containerN a:nth-child(2) span:before{
+  background: #2867B2;
+}
+.containerN a:nth-child(3),
+.containerN a:nth-child(3) span,
+.containerN a:nth-child(3) span:before{
+  background: red;
+ 
+}
+.containerN a:nth-child(4),
+.containerN a:nth-child(4) span,
+.containerN a:nth-child(4) span:before{
+  background: #00acee;
+}
+.containerN a:nth-child(5),
+.containerN a:nth-child(5) span,
+.containerN a:nth-child(5) span:before{
+  background: #0088cc;
+}
+.containerN a:nth-child(6),
+.containerN a:nth-child(6) span,
+.containerN a:nth-child(6) span:before{
+  background: #1DB954;
+}
+.containerN a:hover span{
+  margin-left: 60px;
+  opacity: 0.8;
+  visibility: visible;
+}
+
+.im {
+  margin: 20px auto;
+}
+
+.y {
+  font-family: 'Righteous', cursive;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+p{
+  font-family: 'Jockey One', sans-serif;
+  font-size: 23px;
+  text-align: justify;
+}
+
+h4{
+  font-family: 'Aclonica', sans-serif;
+  font-size: 22px;
+}
+
+.subheading{
+  font-size: 24px;
+  font-family: 'Righteous', cursive;
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
